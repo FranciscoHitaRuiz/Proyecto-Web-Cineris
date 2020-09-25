@@ -1,0 +1,17 @@
+{{> nav}}
+<section class="envoltorio-2">
+	<div class="subenvoltorio">
+		<div class="contenedor-cines-preview">
+			<h2>Elija el cine para ver su cartelera</h2>
+			<div class="lista-cines">
+				{{# each cines}}
+				<div class="item-cine">
+					<h3>{{nombre}}</h3>
+					<a href="/cartelera/{{id}}"><img src="/images/cine-{{id}}.jpg"></a>
+				</div>
+				{{/each}}
+			</div>
+			
+		</div>	
+	</div>
+</section>

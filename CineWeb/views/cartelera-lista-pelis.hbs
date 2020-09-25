@@ -1,0 +1,14 @@
+<div class="cartelera-list">
+	{{# each pelis}}
+		<div class="cartelera-item">
+			<img src="/images/peli-{{this.id}}.jpg" class="imagen">
+			<h3 class="titulo">{{this.titulo}}</h3>
+			<p class="pases"><b>Sesiones: </b>
+				{{# each this.sesiones}}
+					<span class="hora">{{this}}</span>
+				{{/each}}
+			</p>
+			<p class="duracion"><b>Duración: </b>{{this.duracion}}.</p>
+		</div>
+	{{/each}}
+</div>

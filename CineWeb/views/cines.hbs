@@ -1,0 +1,38 @@
+{{> nav}}
+<section class="envoltorio-2">
+	<div class="subenvoltorio">
+		<div class="contenedor-info-cine">
+				<h2>Salas de cine</h2>
+				{{# each cines}}
+				<div class="info-cine">
+					<img src="/images/{{this.img}}">
+					<h3>{{this.nombre}}</h3>
+					<div class="contenedor-datos">
+						
+							<i class="fas fa-users"></i>
+							<i class="fas fa-map-marker-alt"></i>
+							<i class="fas fa-phone-alt"></i>
+							<i class="fas fa-euro-sign"></i>
+							<i class="fas fa-film"></i>
+						
+							<div class="af">
+								<b>Aforo: </b>{{this.aforo}}
+							</div>
+							<div class="dir">
+								<b>Ubicación: </b>{{this.direccion}}
+							</div>
+							<div class="telf">
+								<b>Telf: </b>{{this.telf}}
+							</div>
+							<div class="prize">
+								<b>Precios: </b>Los días entre semana {{this.precioSemana}}€ y los fines de semana {{this.precioFines}}€
+							</div>
+							<div class="salas">
+								<b>Salas: </b>{{this.salas}}
+							</div>
+						</div>
+				</div>
+				{{/each}}
+			</div>
+	</div>
+</section>

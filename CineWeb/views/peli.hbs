@@ -1,0 +1,32 @@
+{{> nav}}
+<section class="envoltorio-2">
+	<div class="subenvoltorio">
+		<div class="contenedor-detalles-peli">
+
+			<div class="header-peli">
+				<h2>{{peli.titulo}}</h2>
+			</div>
+
+			<div class="multimedia">
+				<img src="/images/peli-{{peli.id}}.jpg">
+				<iframe width="560" height="315" src="{{peli.urlVideo}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+
+			<aside>
+				<p><b>País: </b>{{peli.pais}}</p>
+				<p><b>Género: </b>{{peli.genero}}</p>
+				<p><b>Estreno: </b>{{peli.estreno}}</p>
+				<p><b>Directores: </b>{{peli.directores}}</p>
+				<p><b>Guionistas: </b>{{peli.guionistas}}</p>
+				<p><b>Productores: </b>{{peli.productores}}</p>
+				<p><b>Actores: </b>{{peli.actores}}</p>
+				<p><b>Duración: </b>{{peli.duracion}}</p>
+			</aside>
+
+			<div class="sinopsis">
+				<p><b>Sinopsis: </b>{{peli.sinopsis}}</p>
+			</div>
+
+		</div>
+	</div>
+</section>

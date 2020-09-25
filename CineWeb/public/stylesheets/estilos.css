@@ -1,0 +1,1177 @@
+:root {
+	--color1: #36f3e6ff;
+	--color2: #76f7bfff;
+	--color3: #7fbeabff;
+	--color4: #7e998aff;
+	--color5: #85877cff;
+	--color6: #F3F9D2;
+	--color7: #bdc4a7ff;
+	--color8: #2f2f2fff;
+	--color9: #92b4a7ff;
+	--color10:#d8d8d8;
+
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+nav {
+	padding: 15px;
+	
+	margin: auto;
+	width: 100%;
+	text-align: center;
+	
+}
+
+.envoltorio-1 {
+	background-color: var(--color5);
+	display: flex;
+}
+
+.envoltorio-2 {
+	background-color: var(--color6);
+	display: flex;
+}
+
+
+
+.contenedor-1 {
+	display: grid;
+	width: 90%;
+	max-width: 1000px;
+	
+	margin: 20px auto;
+	grid-gap: 5px;
+
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, auto);
+	grid-template-areas: "space space session session"
+			   "header nav nav nav";
+}
+
+
+.contenedor-2 {
+	display: grid;
+	width: 90%;
+	max-width: 1000px;
+	
+	margin: 20px auto;
+	grid-gap: 5px;
+
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, auto);
+	grid-template-areas:"linea-head linea-head linea-head linea-head"
+			   "contenido contenido contenido contenido";
+
+	
+
+}
+
+
+
+
+.contenedor-2 .linea-head {
+	grid-area: linea-head;
+
+}
+
+.contenedor-2 .linea-head hr {
+	background-color: var(--color5);
+	height: 5px;
+	border-radius: 15px;
+	min-width: 100%;
+}
+
+.contenedor-2 .contenido {
+	color: #000;
+	width: 100%;
+	grid-area: contenido;
+	
+	border-radius: 5px;
+}
+
+
+.contenedor-1 .header {
+	grid-area: header;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.contenedor-1 .menu-hamburguesa {
+	display: none;
+	background-color: var(--color5);
+	padding: 10px;
+	position: relative;
+}
+
+.contenedor-1 .menu-hamburguesa i {
+	font-size: 30px;
+	color: #fff;
+	margin-bottom: 20px;
+}
+
+.contenedor-1 .menu-hamburguesa .lista-nav {
+	position: absolute;
+	top: 100px;
+	left: -310px;
+	background-color: var(--color5);
+	z-index: 700;
+	transition-property: left;
+	transition-duration: 0.7s;
+	width: 300px;
+}
+
+.contenedor-1 .menu-hamburguesa .lista-nav li {
+	list-style: none;	
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	height: auto;
+	margin: 20px;
+	border-bottom:1px solid rgba(255,255,255, .3);
+	padding-bottom: 15px;
+	
+}
+
+.contenedor-1 .menu-hamburguesa .lista-nav li:hover {
+	background-color: var(--color6);
+}
+
+.contenedor-1 .menu-hamburguesa .lista-nav li:hover > a {
+	color: var(--color8);
+}
+
+.contenedor-1 .menu-hamburguesa .lista-nav li a {
+	color: #fff;
+	font-size: 25px;
+}
+
+.contenedor-1 .menu-hamburguesa .lista-nav li a:link {
+	text-decoration: none;
+}
+
+.contenedor-1 .session-movil {
+	display: none;
+	width: 50px;
+}
+
+.contenedor-1 .session-movil a {
+	color: #fff;
+}
+
+.contenedor-1 .session-movil a i {
+	font-size: 25px;
+}
+
+.contenedor-1 .session {
+	grid-area: session;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding-bottom: 40px;
+}
+
+
+.contenedor-1 .session-active {
+	grid-area: session;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	color: #fff;
+	width: 100%;
+	position: relative;
+}
+
+.contenedor-1 .session-active a > i {
+	font-size: 23px;
+	color: var(--color6);
+	margin-left: 5px;
+}
+
+.contenedor-1 .session-active > i {
+	font-size: 6px;
+	position: absolute;
+	top: 20px;
+	right: -3px;
+	color: green;
+	border: solid white;
+	border-radius: 100px;
+	border-width: 0.1px;
+}
+
+.contenedor-1 .contenedor-navi {
+	grid-area: nav;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	
+
+}
+
+.contenedor-1 .contenedor-navi .navi {
+	display: grid;
+	height: 70%;
+	width: 100%;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 50px;
+	grid-template-areas: "cines pelis cartelera tarjeta";
+
+}
+
+.contenedor-1 .contenedor-navi .navi .cines {
+	grid-area: cines;
+	
+
+
+}
+
+.contenedor-1 .contenedor-navi .navi .lista-cines {
+	display: none;
+	position: absolute;
+	top: 50px;
+	width: 100%;
+	z-index: 600;
+	background-color: var(--color5);
+
+}
+
+
+
+.contenedor-1 .contenedor-navi .navi .lista-cines li {
+	list-style: none;	
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.contenedor-1 .contenedor-navi .navi .cartelera:hover > .lista-cines {
+	display: block;
+}
+
+.contenedor-1 .contenedor-navi .navi .lista-cines li:hover {
+	background-color: var(--color6);
+}
+
+.contenedor-1 .contenedor-navi .navi .lista-cines li:hover > a {
+	color: var(--color8);
+}
+
+.contenedor-1 .contenedor-navi .navi .pelis {
+	grid-area: pelis;
+	
+}
+
+.contenedor-1 .contenedor-navi .navi .cartelera {
+	grid-area: cartelera;
+	position: relative;
+}
+
+.contenedor-1 .contenedor-navi .navi .tarjeta {
+	grid-area: tarjeta;
+	
+}
+
+.contenedor-1 .header img {
+	height: 100%;
+	width: 100%;
+}
+
+.contenedor-1 .contenedor-navi a {
+	/*color:#1c1c1c;*/
+	color: #fff;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.contenedor-1 .contenedor-navi .navi .cines,
+.contenedor-1 .contenedor-navi .navi .pelis,
+.contenedor-1 .contenedor-navi .navi .cartelera,
+.contenedor-1 .contenedor-navi .navi .tarjeta {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	cursor: pointer;
+	height: 100%;
+	transition: .2s ease all;
+}
+
+
+
+.contenedor-1 .contenedor-navi .navi .cines:hover,
+.contenedor-1 .contenedor-navi .navi .pelis:hover,
+.contenedor-1 .contenedor-navi .navi .cartelera:hover,
+.contenedor-1 .contenedor-navi .navi .tarjeta:hover {
+	background-color: var(--color6);
+	color: var(--color5);
+		
+}
+
+.contenedor-1 .contenedor-navi a:link {
+	text-decoration: none;
+}
+
+.contenedor-1 .session a:link {
+	text-decoration: none;
+}
+
+.contenedor-1 .session a {
+	color: var(--color6);
+	font-size: 14px; 
+	padding: 10px;
+}
+
+.contenedor-1 .session a:hover {
+	text-decoration: underline;
+	color: var(--color9);
+}
+
+/* Contenedor etiquetas y controles */
+
+.contenedor-etiquetas-controles {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	padding-top: 20px;
+}
+
+.contenedor-etiquetas-controles h3 {
+	font-size: 18px;
+	color: var(--color6);
+	border-bottom: 2px solid var(--color6);
+	padding: 5px;
+	padding-bottom: 0;
+	
+
+}
+
+.contenedor-etiquetas-controles .indicadores button{
+	background:  #000;
+	height: 3px;
+	width: 10px;
+	cursor: pointer;
+	border: none;
+	margin-right: 2px;
+}
+
+.contenedor-etiquetas-controles .indicadores button:hover,
+.contenedor-etiquetas-controles .indicadores button.activo {
+	background: var(--color9);
+}
+
+
+.ultimas-peliculas {
+	margin-bottom: 70px;
+
+}
+
+.ultimas-peliculas .contenedor-principal {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.ultimas-peliculas .contenedor-principal .flecha-izq,
+.ultimas-peliculas .contenedor-principal .flecha-der {
+	position: absolute;
+	border: none;
+	background: rgba(0,0,0,0.3);
+	font-size: 40px;
+	height: 50%;
+	top: calc(50% - 25%);
+	line-height: 40px;
+	width: 50px;
+	color: #fff;
+	cursor: pointer;
+	z-index: 500;
+	transition: .2s ease all;
+}
+
+.ultimas-peliculas .contenedor-principal .flecha-izq {
+	left: 0;
+}
+
+.ultimas-peliculas .contenedor-principal .flecha-der {
+	right: 0;
+}
+
+.ultimas-peliculas .contenedor-principal .flecha-izq:hover,
+.ultimas-peliculas .contenedor-principal .flecha-der:hover {
+	background: rgba(104,104,104,0.7);
+}
+
+/* Carrusel */
+
+.ultimas-peliculas .contenedor-carrusel {
+	width: 100%;
+	padding: 5px 0;
+	overflow: hidden;
+	scroll-behavior: smooth;
+	
+}
+
+.ultimas-peliculas .contenedor-carrusel .carrusel {
+	display: flex;
+	flex-wrap: nowrap;
+	min-width: 100%;
+
+}
+
+.ultimas-peliculas .contenedor-carrusel .carrusel .pelicula {
+	min-width: 100%;
+	transition: .3s ease all;
+	box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+	
+}
+
+.ultimas-peliculas .contenedor-carrusel .carrusel .pelicula img {
+	width: 100%;
+	vertical-align: top;
+	
+	
+}
+
+.ultimas-peliculas .contenedor-carrusel .carrusel .pelicula a {
+	display: block;
+}
+
+
+footer {
+	
+	width: 100%;
+	height: 40px;
+	background-color: var(--color8);
+}
+
+/* Información de las salas de cine */
+
+
+.contenedor-info-cine {
+	width: 90%;
+	max-width: 1000px;
+	color: var(--color6);
+	margin: 20px auto;
+
+}
+
+.contenedor-info-cine .info-cine {
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 30px;
+	
+}
+.contenedor-info-cine h2 {
+	margin-bottom: 20px;
+	border-bottom: 2px solid var(--color6);
+}
+
+.contenedor-info-cine .info-cine h3 {
+	padding-bottom: 20px;
+}
+
+.contenedor-info-cine .info-cine img {
+	width: 50%;
+	float: left;
+	margin-right: 20px;
+	border-radius: 10px;
+	max-height: 240px;
+	max-width: 340px;
+}
+
+.contenedor-info-cine .info-cine .contenedor-datos .iconos i {
+	display: block;
+}
+
+
+.contenedor-info-cine .info-cine .contenedor-datos {
+	display: grid;
+	grid-gap: 4px;
+	grid-template-columns: 20px auto;
+	grid-template-rows: repeat(5, auto);
+	grid-template-areas: "ico-af af"
+						 "ico-dir dir"
+						 "ico-telf telf"
+						 "ico-prize prize"
+						 "ico-salas salas";
+}
+
+
+.contenedor-info-cine .info-cine .contenedor-datos .fa-users {
+	grid-area: ico-af;
+}
+
+.contenedor-info-cine .info-cine .contenedor-datos .fa-map-marker-alt {
+	grid-area: ico-dir;
+}
+
+.contenedor-info-cine .info-cine .contenedor-datos .fa-phone-alt {
+	grid-area: ico-telf;
+}
+
+.contenedor-info-cine .info-cine .contenedor-datos .fa-euro-sign {
+	grid-area: ico-prize;
+}
+
+.contenedor-info-cine .info-cine .contenedor-datos .fa-film {
+	grid-area: ico-salas;
+}
+
+.contenedor-info-cine .info-cine .contenedor-datos .af {
+	grid-area: af;
+}
+
+.contenedor-info-cine .info-cine .contenedor-datos .dir {
+	grid-area: dir;
+}
+
+.contenedor-info-cine .info-cine .contenedor-datos .telf {
+	grid-area: telf;
+}
+
+.contenedor-info-cine .info-cine .contenedor-datos .prize {
+	grid-area: prize;
+}
+
+.contenedor-info-cine .info-cine .contenedor-datos .salas {
+	grid-area: salas;
+}
+
+.contenedor-pelis {
+	width: 90%;
+	margin: 20px auto;
+	max-width: 1000px;
+}
+
+.contenedor-pelis h2 {
+	margin-bottom: 20px;
+	color: var(--color6);
+	border-bottom: 2px solid var(--color6);
+}
+
+.contenedor-pelis .peliculas {
+	max-width: 100%;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(4, auto);
+	grid-template-rows: auto;
+
+}
+
+.contenedor-pelis .peliculas .peli {
+	max-height: 300px;
+	max-width: 235px;
+	position: relative;
+
+}
+
+.contenedor-pelis .peliculas .peli:hover .previa-peli {
+	opacity: 1;
+}
+
+.contenedor-pelis .peliculas .peli img{
+	
+	width: 100%;
+	height: 100%;
+}
+
+.contenedor-pelis .peliculas .peli .previa-peli {
+	opacity: 0;
+	background-color: var(--color9);
+	text-align: center;
+	font-size: 20px;
+	position: absolute;
+	bottom: 0;
+	transition-property: opacity;
+	transition-duration: 0.5s;
+	width: 100%;
+}
+
+
+.contenedor-detalles-peli {
+	width: 90%;
+	max-width: 1000px;
+	display: grid;
+	color: #fff;
+	margin: 20px auto;
+	grid-gap: 12px;
+	grid-template-columns: 720px auto;
+	grid-template-rows: repeat(3, auto);
+	grid-template-areas: "header-peli header-peli"
+						 "multimedia aside"
+						 "sinopsis sinopsis";
+}
+
+.contenedor-detalles-peli .header-peli {
+	grid-area: header-peli;
+	text-align: center;
+	
+	padding: 10px 0;
+}
+
+.contenedor-detalles-peli .multimedia {
+	grid-area: multimedia;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.contenedor-detalles-peli aside {
+	grid-area: aside;
+	font-size: 14px;
+	padding: 10px;
+}
+
+.contenedor-detalles-peli .sinopsis {
+	grid-area: sinopsis;
+	padding: 10px;
+}
+
+.contenedor-detalles-peli .header-peli,
+.contenedor-detalles-peli aside,
+.contenedor-detalles-peli .sinopsis {
+	background-color: rgba(47,47,47, 0.7);
+	border-radius: 5px;
+}
+
+
+.contenedor-detalles-peli .multimedia iframe {
+	max-height: 280px;
+	max-width: 500px;
+	
+
+}
+
+
+.contenedor-cartelera {
+	width: 90%;
+	margin: 20px auto;
+	max-width: 1000px;
+	color: var(--color6);
+}
+
+.contenedor-cartelera .header-cartelera {
+	display: inline-block;
+	border-bottom: 2px solid #ccc;
+}
+
+.contenedor-cartelera .desplegable-fecha {	
+	width: 100%;
+	height: 35px;
+	border-radius: 5px;
+	font-size: 17px;
+	-moz-appearance: none;
+ 	-webkit-appearance: none;
+ 	appearance: none;
+ 	margin-top: 10px;
+ 	background-color: var(--color10);
+ 	color: var(--color8);
+}
+
+.contenedor-cartelera .desplegable-fecha:hover {
+	box-shadow: 0 0 1px 3px #ff0;
+}
+
+.contenedor-cartelera .cartelera-list .cartelera-item{
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: minmax(148px, 15%) auto;
+	grid-template-rows: repeat(3, auto);
+	grid-template-areas: "imagen titulo"
+						 "imagen pases"
+						 "imagen duracion";
+	padding: 25px 0;
+	border-bottom: solid;
+	border-color:#fff;
+
+}
+
+.contenedor-cartelera .cartelera-list .cartelera-item .imagen {
+	grid-area: imagen;
+	max-width: 148px;
+	max-height: 209px;
+
+}
+
+
+.contenedor-cartelera .cartelera-list .cartelera-item .titulo {
+	grid-area: titulo;
+	
+}
+
+.contenedor-cartelera .cartelera-list .cartelera-item .pases {
+	grid-area: pases;
+	line-height: 1.8;
+}
+
+.contenedor-cartelera .cartelera-list .cartelera-item .duracion {
+	grid-area: duracion;
+	font-size: 13px;
+}
+
+
+.contenedor-cartelera .cartelera-list .cartelera-item .pases .hora {
+	padding: 2px 9px;
+	background-color: #f0ad4e;
+	margin: 0 6px;
+	border-radius: 5px;
+	color: #fff;
+	font-weight: bolder;
+}
+
+.contenedor-cartelera .cartelera-list .cartelera-item .imagen img {
+	width: 100%;
+	height: 100%;
+}
+
+.subenvoltorio {
+	background-image: url("/images/milky2.jpg");
+	width: 100%;
+	height: 100%;
+	background-attachment: fixed;
+	
+}
+
+.contenedor-tarjeta {
+	width: 90%;
+	max-width: 1000px;
+	margin: 20px auto;
+	color: #fff;
+	text-align: center;
+}
+
+.contenedor-tarjeta h2 {
+	margin-bottom: 20px;
+	font-size: 30px;
+	color: var(--color6);
+}
+
+.contenedor-tarjeta h3 {
+	display: inline-block;
+	font-size: 20px;
+	margin-bottom: 20px;
+	color: var(--color6);
+	border-bottom: 2px solid var(--color6);
+}
+
+.contenedor-tarjeta p {
+	max-width: 600px;
+	text-align: justify;
+	text-justify: auto;
+}
+
+.contenedor-tarjeta .header-tarjeta {
+	text-align: left;
+	
+}
+
+.contenedor-tarjeta .header-tarjeta h3 {
+	border-bottom: none;
+	margin-left: 3px;
+	font-size: 30px;
+}
+
+.contenedor-tarjeta .header-tarjeta i {
+	font-size: 50px;
+}
+
+.contenedor-tarjeta .header-tarjeta .puntos-acumulados {
+	padding: 2px 9px;
+	background-color: #f0ad4e;
+	margin: 0 6px;
+	border-radius: 5px;
+	font-weight: bolder;
+}
+
+.contenedor-tarjeta .presentacion{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+
+.contenedor-tarjeta .presentacion img {
+	max-width: 227px;
+	max-height: 212px;
+}
+
+.contenedor-tarjeta .presentacion p {
+	max-width: 300px;
+	font-size: 19px;
+}
+
+.contenedor-tarjeta .puntos {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.contenedor-tarjeta .puntos .productos {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 20px;
+	width: 100%;
+
+}
+
+.contenedor-tarjeta .puntos .productos .producto {
+	height: auto;
+	width: 100%;
+	margin: 40px 0;
+}
+
+.contenedor-tarjeta .puntos .productos .producto p {
+	text-align: center;
+}
+
+.contenedor-tarjeta .puntos .productos .producto img {
+	max-height: 57px;
+
+}
+
+.contenedor-tarjeta .premios {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.contenedor-tarjeta .premios p {
+	margin-bottom: 20px;
+}
+
+.contenedor-tarjeta .premios .premio {
+	max-height: 200px;
+	max-width: 200px;
+}
+
+.contenedor-tarjeta .premios .premio img {
+	max-width: 85%;
+	max-height: 85%;
+	width: auto;
+	height: auto;
+	border-radius: 5px;
+}
+
+.contenedor-tarjeta .premios .premio p {
+	text-align: center;
+	
+}
+
+.contenedor-tarjeta .descuentos {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.contenedor-tarjeta .descuentos p {
+	text-align: center;
+}
+
+.contenedor-tarjeta input {
+	background-color: #f0ad4e;
+	padding: 10px;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 50px;
+}
+
+.caja-login {
+	font-family: Open Sans,arial,sans-serif;
+	width: 90%;
+	margin: 20px auto;
+	max-width: 420px;
+	display: block;
+	background-color: #fff;
+	padding: 0px 30px 10px 30px;
+	box-shadow: 0 0 10px 0 rgba(0,0,0,.15);
+	border-radius: 20px;
+}
+
+.caja-login .activo-contenido {
+	display: block;
+}
+
+.caja-login .no-activo-contenido {
+	display: none;
+}
+
+.caja-login .caja-nav {
+	display: flex;
+	justify-content: space-around;
+	
+
+}
+
+.caja-login .caja-nav h2 {
+	margin-bottom: 10px;
+	display: inline;
+	padding: 13px;
+	border-radius: 5px;
+}
+
+.caja-login .caja-nav h2:hover {
+	border-top: solid;
+	border-top-color: #f0ad4e;
+	cursor: pointer;
+	background-color: #fff;
+	color: #000;
+}
+
+.caja-login > ul > li {
+	list-style-type: none;
+}
+
+.caja-login input {
+	border-radius: 3px;
+	width: 100%;
+	height: 40px;
+	outline: none;
+}
+
+.caja-login .writable {
+	background-color: #f2f2f2;
+	margin: 5px 0;
+	width: 95%;
+	padding-left: 5%;
+
+}
+
+.caja-login .writable:focus {
+	background-color: #fff;
+}
+
+.caja-login .btn {
+	background-color: #f0ad4e;
+	color: #fff;
+	
+}
+
+.caja-login em {
+	font-size: 11px;
+	color: #909090;
+}
+
+.caja-login > ul > li > form > ul {
+	padding-left: 25px;
+}
+
+.caja-login > ul > li > form > ul > li {
+	list-style-type: disc;
+	color: #909090;
+
+}
+
+.caja-login .activo-tab {
+	border-top: solid;
+	border-top-color: #f0ad4e;
+
+}
+
+.caja-login .no-activo-tab {
+	border-top: solid;
+	border-top-color: #909090;
+	background-color: rgba(144, 144, 144, 0.2);
+	color: #909090;
+	
+}
+
+.envoltorio-2 .contenedor-cines-preview {
+	width: 90%;
+	margin: 20px auto;
+	max-width: 1000px;
+}
+
+.envoltorio-2 .contenedor-cines-preview h2 {
+	font-size: 35px;
+	color: var(--color6);
+	text-align: center;
+}
+
+.envoltorio-2 .contenedor-cines-preview .lista-cines {
+	display: grid;
+	grid-gap: 20px;
+	margin: 20px auto;
+	grid-template-columns: repeat(2, auto);
+	grid-template-rows: auto;
+}
+
+.envoltorio-2 .contenedor-cines-preview .lista-cines .item-cine {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.envoltorio-2 .contenedor-cines-preview .lista-cines .item-cine h3 {
+	margin-bottom: 10px;
+	font-size: 23px;
+	color: var(--color6);
+	border-bottom: 2px solid var(--color6);
+}
+
+.envoltorio-2 .contenedor-cines-preview .lista-cines .item-cine img {
+	width: 100%;
+	height: 100%;
+	max-width: 390px;
+	max-height: 180px;
+	border-radius: 80px;
+	border: solid #f0ad4e 8px;
+	animation-name: giro;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	transition-property: box-shadow;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in-out;
+}
+
+.envoltorio-2 .contenedor-cines-preview .lista-cines .item-cine img:hover {
+	animation-name: none;
+	box-shadow: 0 0 30px #f0ad4e,
+				0 0 30px #f0ad4e;
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 1020px) {
+	.contenedor-pelis .peliculas {
+		grid-template-columns: repeat(3, 1fr);
+		
+
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.contenedor-pelis .peliculas {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.contenedor-1 {
+		margin: 0;
+		grid-template-rows: 100px;
+		grid-template-columns: auto 123px 123px auto;
+		grid-template-areas: "menu-hamburguesa header header session-movil";
+		width: 100%;
+
+	}
+
+	.contenedor-1 .session-movil {
+		grid-area: session-movil;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.contenedor-1 .menu-hamburguesa {
+		display: flex;
+		align-items: flex-end;
+		grid-area: menu-hamburguesa;
+	}
+
+	.contenedor-1 .session {
+		display: none;
+	}
+
+	.contenedor-1 .session-active {
+		grid-area: session-movil;
+		justify-content: flex-start;
+	}
+
+	.contenedor-1 .session-active > i {
+		top: 55px;
+		right: 5px;
+	}
+	
+	.contenedor-1 .session-active p {
+		display: none;
+	}
+
+
+	.contenedor-1 .contenedor-navi {
+		display: none;
+	}
+
+	.contenedor-pelis {
+		text-align: center;
+	}
+
+
+	.contenedor-detalles-peli {
+		grid-template-columns: repeat(2, auto);
+		grid-template-rows: repeat(4, auto);
+		grid-template-areas: "header-peli header-peli"
+						 "multimedia multimedia"
+						 "aside aside"
+						 "sinopsis sinopsis";
+	}
+
+	.contenedor-detalles-peli img {
+		display: none;
+	}
+
+	.contenedor-detalles-peli .header-peli {
+		font-size: 12px;
+	}
+
+	.contenedor-detalles-peli .multimedia iframe {
+		width: 100%;
+	}
+
+	.contenedor-tarjeta .presentacion {
+		flex-direction: column;
+	}
+
+	.contenedor-tarjeta input {
+		font-size: 40px;
+	}
+
+	.caja-login h2 {
+		font-size: 17px;
+	}
+
+	.contenedor-info-cine .info-cine img {
+		float: none;
+		width: 100%;
+	}
+
+	.contenedor-info-cine h2 {
+		text-align: center;
+	}
+
+	.envoltorio-2 .contenedor-cines-preview .lista-cines {
+		grid-template-columns: auto;
+	}
+
+	.caja-login {
+		padding: 0px 10px 10px 10px;
+	}
+}
+
+@keyframes giro {
+	100% {transform: rotateY(360deg);}
+}
+
+@keyframes agrandar {
+	0% {transform: scale(1.1,1.1);}
+	100% {transform: scale(1, 1);}
+}

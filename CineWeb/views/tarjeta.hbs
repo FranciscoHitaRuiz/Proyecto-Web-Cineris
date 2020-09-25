@@ -1,0 +1,69 @@
+{{> nav}}
+<section class="envoltorio-2">
+	<div class="subenvoltorio">
+		<div class="contenedor-tarjeta">
+			{{# if tarjeta}}
+				<div class="header-tarjeta">
+					<i class="fas fa-user-astronaut"></i>
+					<h3>{{user}}</h3>
+					<p>Puntos acumulados: <span class="puntos-acumulados">{{puntos}}</span></p>
+					<br>
+				</div>
+			{{/if}}
+			<h2>Aprovecha todas las ventajas de nuestra tarjeta</h2>
+			<div class="presentacion">
+				<img src="/images/socio.png">
+				<p>Si adquieres nuestra tarjeta de fidelidad podrás optar a descuentos exclusivos y a premios.<br>Acumula puntos y canjealos por regalos o entradas gratuitas!</p>
+			</div>
+
+			<div class="puntos">
+				<h3>Sistema de puntos</h3>
+				<p>Cada vez que realices una compra en nuestros cines ya sea una entrada o un producto de la tienda de comestibles ya estarás ganando puntos. Para ello a la hora de realizar una compra física deberás usar tu tarjeta de fidelidad, o si es de forma online deberás haber iniciado sesión con anterioridad.</p>
+				
+				<div class="productos">
+					<div class="producto">
+						<img src="/images/palomitas_sin_fondo.png">
+						<p>100 puntos</p>
+					</div>
+					<div class="producto">
+						<img src="/images/ticket_sin_fondo.png">
+						<p>300 puntos</p>
+					</div>
+					<div class="producto">
+						<img src="/images/bebida_sin_fondo2.png">
+						<p>50 puntos</p>
+					</div>
+				</div>
+				
+			</div>
+			<div class="premios">
+				<h3>Premios</h3>
+				<p>Estos son los premios que podrás obtener a cambio de los puntos acumulados:</p>
+				<div class="premio">
+					<img src="/images/bici.jpg">
+					<p>20000 puntos</p>
+				</div>
+				<div class="premio">
+					<img src="/images/xbox.png">
+					<p>25000 puntos</p>
+				</div>
+				<div class="premio">
+					<img src="/images/television.png">
+					<p>40000 puntos</p>
+				</div>
+				<div class="premio">
+					<img src="/images/crucero.jpg">
+					<p>100000 puntos</p>
+				</div>
+			</div>
+			<div class="descuentos">
+				<h3>Descuentos</h3>
+				<p>Si eres poseedor de nuestra tarjeta de fidelidad tendrás de forma permanente un descuento del 5% en todas tus compras.</p>
+			</div>
+			{{#unless tarjeta}}
+				<input id="btn-tarjeta" type="button" value="Adquirir tarjeta">
+			{{/unless}}
+		</div>
+	</div>
+	
+</section>

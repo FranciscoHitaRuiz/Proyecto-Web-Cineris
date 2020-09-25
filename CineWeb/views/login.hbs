@@ -1,0 +1,50 @@
+{{> nav}}
+<section class="envoltorio-2">
+	<div class="subenvoltorio">
+		<div class="caja-login">
+			<div class="caja-nav">
+				<h2 class="inicio {{inicio_tab}}">Inicio de sesión</h2>
+				<h2 class="registro {{registro_tab}}">Nuevo cliente</h2>
+			</div>
+			<ul>
+				<li id="inicio" class="{{inicio_contenido}}">
+					
+					<form>
+						
+						<input class="writable" type="text" id="userLog" name="user" placeholder="Usuario *"><br>
+						
+						<input class="writable" type="password" id="passwordLog" name="password" placeholder="Contraseña *"><br><br>
+						
+						<input class="btn btnLogin" type="submit" value="Entrar">
+
+					</form>
+				</li>
+				<li id="registro" class="{{registro_contenido}}">
+					
+					<form>
+						<em>Los campos marcados con * son obligatorios.</em><br>
+						<input class="writable" type="text" id="userReg" name="user" placeholder="Usuario *"><br>
+						<h3>Seguridad</h3>
+						<ul>
+							<li>
+								<em>Utiliza 6 caracteres o más</em>
+							</li>
+							<li>
+								<em>Incluye al menos una mayúscula y una minúscula</em>
+							</li>
+							<li>
+								<em>Incluye al menos una número</em>
+							</li>
+						</ul>
+						<input class="writable" type="password" id="passwordReg" name="password" placeholder="Contraseña *"><br>
+						
+						<input class="writable" type="password" id="rePasswordReg" name="re-password" placeholder="Repetir contraseña *"><br><br>
+
+						<input class="btn btnRegistro" type="submit" value="Registrarse">
+
+					</form>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>

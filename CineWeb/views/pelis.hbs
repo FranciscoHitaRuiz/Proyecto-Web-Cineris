@@ -1,0 +1,19 @@
+{{> nav}}
+<section class="envoltorio-2">
+	<div class="subenvoltorio">
+		<div class="contenedor-pelis">
+			<h2>Películas</h2>
+			<div class="peliculas">
+				{{# each pelis}}
+					<div class="peli">
+						<a href="/pelis/{{this.id}}"><img src="/images/peli-{{this.id}}.jpg"></a>
+						<div class="previa-peli">
+							<h4>{{this.titulo}}</h4>
+							<h5>Estreno: {{this.estreno}}</h5>
+						</div>
+					</div>
+				{{/each}}
+			</div>
+		</div>	
+	</div>
+</section>

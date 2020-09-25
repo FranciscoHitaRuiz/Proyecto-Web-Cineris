@@ -1,0 +1,30 @@
+{{> nav}}
+<section class="envoltorio-2">
+	<div class="subenvoltorio">
+		<div class="contenedor-cartelera">
+			
+			<h2 class="header-cartelera">{{cine}}</h2>
+			<select class="desplegable-fecha">
+
+				<option selected disabled>Seleccione la fecha...</option>
+				{{# each fechasWeb}}
+					<option>{{this}}</option>
+				{{/each}}
+			</select>
+			<div class="cartelera-list">
+				{{# each pelis}}
+					<div class="cartelera-item">
+						<a href="/pelis/{{this.id}}" class="imagen"><img src="/images/peli-{{this.id}}.jpg"></a>
+						<h3 class="titulo">{{this.titulo}}</h3>
+						<p class="pases"><b>Sesiones: </b>
+							{{# each this.sesiones}}
+								<span class="hora">{{this}}</span>
+							{{/each}}
+						</p>
+						<p class="duracion"><b>Duración: </b>{{this.duracion}}.</p>
+					</div>
+				{{/each}}
+			</div>
+		</div>	
+	</div>
+</section>

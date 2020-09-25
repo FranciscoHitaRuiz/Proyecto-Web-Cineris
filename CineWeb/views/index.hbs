@@ -1,0 +1,42 @@
+{{> nav}}
+<div class="envoltorio-2">
+	<div class="subenvoltorio">
+		<div class="contenedor-2">
+			<div class="linea-head">
+				<hr>
+			</div>
+			<div class="contenido">
+
+				<div class="ultimas-peliculas">
+
+					<div class="contenedor-etiquetas-controles">
+						<h3>ÚLTIMOS ESTRENOS</h3>
+						<div class="indicadores">
+						</div>
+					</div>
+
+					<div class="contenedor-principal">
+						<button id="flecha-izq" class="flecha-izq">
+							<i class="fas fa-angle-left"></i>
+						</button>
+
+						<div class="contenedor-carrusel">
+							<div class="carrusel">
+								{{# each peliculas}}
+									<div class="pelicula">
+										<a href="#"><img src="/images/{{this.id}}.jpg"></a>
+									</div>
+								{{/each}}
+							</div>
+						</div>
+
+						<button id="flecha-der" class="flecha-der">
+							<i class="fas fa-angle-right"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	

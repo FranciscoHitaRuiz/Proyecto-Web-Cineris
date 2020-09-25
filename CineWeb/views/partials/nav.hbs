@@ -1,0 +1,67 @@
+<div class="envoltorio-1">	
+	<div class="contenedor-1">	
+		<div class="header">
+			<a href="/"><img src="/images/logo-2.png" alt="No funciono" /></a>
+		</div>
+		<div class="menu-hamburguesa">
+			<a href="#" id="btn-hamb"><i class="fas fa-bars"></i></a>
+			<ul class="lista-nav">
+				<li>
+					<a href="/cines">CINES</a>
+				</li>
+				<li>
+					<a href="/pelis">PELÍCULAS</a>
+				</li>
+				<li>
+					<a href="/cartelera">CARTELERA</a>
+				</li>
+				<li>
+					<a href="/tarjeta">TARJETA DE FIDELIDAD</a>
+				</li>
+			</ul>
+		</div>
+		<div class="contenedor-navi">
+			<div class="navi">
+				<div class="cines">
+					<a href="/cines">Cines</a>
+				</div>
+				<div class="pelis">
+					<a href="/pelis">Películas</a>
+				</div>
+				<div class="cartelera">
+					<a href="/cartelera">Cartelera</a>
+					<ul class="lista-cines">
+							<li>
+								<a href="/cartelera/1">Thader</a>
+							</li>
+							<li>
+								<a href="/cartelera/2">El Tiro</a>
+							</li>
+						</ul>
+				</div>
+				<div class="tarjeta">
+					<a href="/tarjeta">Tarjeta de fidelidad</a>
+				</div>
+			</div>
+		</div>
+		{{# unless logueado}}
+			<div class="session">
+				<a href="/login">Iniciar sesión</a>
+				<a href="/register">Crear cuenta</a>
+			</div>
+			<div class="session-movil">
+			<a href="/login"><i class="far fa-user-circle"></i></a>
+		</div>
+		{{/unless}}
+
+		{{# if logueado}}
+			<div class="session-active">
+				<p>Bienvenido {{logueado}}</p>
+				<a href="/#" title= "Logout" id="logout"><i class="fas fa-power-off"></i></a>
+				<i class="fas fa-circle"></i>
+			</div>
+		{{/if}}
+
+		
+	</div>
+</div>
